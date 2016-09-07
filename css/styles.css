@@ -1,0 +1,139 @@
+/****************************
+*							*
+*		Basic styles		*
+*							*
+****************************/
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+#imgGallery{
+	display: inline-flex;
+	width: 980px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0;
+	direction: ltr;
+}
+
+li{
+	list-style: none;
+	margin: 30px 0;
+	width: 200px;
+	height: 200px;
+}
+
+input{
+	width: 95%;
+	max-width: 460px;
+	height: 30px;
+	line-height: 30px;
+	background-color: white;
+	color: grey;
+	font-weight:bold;
+	font-size: 16pt;
+	border-radius: 5px;
+	border: 2px solid grey;
+	outline: none;
+	padding: 0 10px;
+}
+
+.search{
+	background-color: white;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+/****************************
+*							*
+*		Overlay styles		*
+*							*
+****************************/
+
+#overlay{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .9);
+	display: none;
+}
+
+#overlay div, #overlay img, #overlay iframe {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 3%;
+}
+
+.overlayImg, #overlay iframe, #noResult {
+	display: none;
+}
+
+#overlay p{
+	color: white;
+	text-align: left;
+	padding: 20px 30px;
+	max-width: 600px;
+	margin: 0 auto;
+	line-height: 25px;
+	width: 70%;
+}
+
+.overlayImg, #player{
+	max-width: 700px;
+	width: 70%;
+	max-height: 400px;
+	height: 70%;
+}
+
+.x {
+	position: absolute;
+	right: 5%;
+}
+
+.left, .right, .x{
+	cursor: pointer;
+	width: 5%;
+	margin: 0 10px;
+}
+
+/****************************
+*							*
+*		Media queries		*
+*							*
+****************************/
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+	#imgGallery{
+		width: 720px;
+	}
+}
+
+@media screen and (min-width: 540px) and (max-width: 768px){
+
+	#imgGallery{
+		width: 460px;
+	}
+}
+
+@media screen and (max-width: 539px){
+
+	#imgGallery{
+		width: 200px;
+	}
+	
+	.overlayImg{
+		height: 50%;
+	}
+}
